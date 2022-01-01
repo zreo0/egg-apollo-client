@@ -1,6 +1,8 @@
 # EGG-APOLLO-CLIENT
 [![NPM version][npm-image]][npm-url]
 
+## 说明：本仓库为修改自用版本，修改了其中的依赖，依赖也是二次修改，修复了验签问题，支持secret连接，原仓库：https://github.com/xuezier/apollo-client
+
 [npm-image]: https://img.shields.io/npm/v/@gaoding/egg-apollo-client.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@gaoding/egg-apollo-client
 
@@ -41,8 +43,8 @@ config.apollo = {
     cluster_name: 'xxx',                    // optional, 加载配置的集群名称, default: 'default'
     namespace_name: 'xxx',                  // optional, 加载配置的命名空间, default: 'application'
     release_key: 'xxx',                     // optional, 加载配置的版本 key, default: ''
-    ip: 'xxx'                               // optional,
-
+    ip: 'xxx',                              // optional,
+    secret: 'xxx',                          // optional，密钥，如果开启了密钥验证的话
     set_env_file: false,                    // optional, 是否写入到 env 文件, default: false
     env_file_path: 'xxxx',                  // optional, 写入的 env 文件路径, default: ${os.tmpdir()}/.env.apollo
     watch: false,                           // optional, 长轮询查看配置是否更新, default: false
